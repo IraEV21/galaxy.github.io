@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="space.css">
+		<title>Galactic</title>
+	<style type="text/css">
+		* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				width: 100vw;
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				overflow: hidden;
+			}
+			.stars {
+				background: black url("stars.png") repeat top center;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				z-index: -2;
+			}
+			.twinkling {
+				background: transparent url("twinkling.png") repeat top center;
+				width: 100%;
+			 	height: 100%;
+				position: absolute;
+				z-index: -1;
+				animation: move-stars 200s infinite linear;
+			}
+			@keyframes move-stars {
+				0% {
+					background-position: 0 0;
+				}
+				100% {
+					background-position: -10000px 5000px;
+				}
+			}
+			.system {
+				width: 1000px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.orbita {
+				position: absolute;
+				display: flex;
+				align-items: center;
+				justify-content: start;
+				border: 1px white solid;
+				border-radius: 50%;
+			}
+			
+			.earth {
+				width: 200px;
+				height: 200px;
+				animation: spin 10s infinite linear;
+			}
+			.mars {
+				width: 300px;
+				height: 300px;
+				animation: spin 13s infinite linear;
+			}
+			.jupiter {
+				width: 400px;
+				height: 400px;
+				animation: spin 15s infinite linear;
+			}
+			.saturn {
+				width: 500px;
+				height: 500px;
+				animation: spin 18s infinite linear;
+			}
+			/*уран*/
+			.uranus {
+				width: 600px;
+				height: 600px;
+				animation: spin 20s infinite linear;
+			}
+			.neptune {
+				width: 700px;
+				height: 700px;
+				animation: spin 23s infinite linear;
+			}
+
+			@keyframes spin {
+				0% {
+					transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+			.earth-img {
+				position: relative;
+				left: -12px;
+				border-radius: 100%;}
+			.mars-img {
+				position: relative;
+				left: -12px;
+				border-radius: 100%;
+			}
+			.jupiter-img {
+				position: relative;
+				left: -12px;
+				border-radius: 100%;
+			}
+			.saturn-img {
+				position: relative;
+				left: -12px;
+				border-radius: 100%;
+			}
+			.uranus-img {
+				position: relative;
+				left: -12px;
+				border-radius: 100%;
+			}
+			.neptune-img {
+				position: relative;
+				left: -12px;
+				border-radius: 100%;
+			}
+	
+	</style>
+	</head>
+	<body>
+		<div class="stars"></div>
+		<div class="twinkling"></div>
+		<div class="system">
+			<div class="sun">
+				<img
+					src="sun.png"
+					alt="sun"
+					class="sun-img"
+					/>
+				
+			</div>
+			<!-- земля-->
+			<div class="orbita earth">
+				<img
+					src="earth.png"
+					class="earth-img"
+					alt=""
+				/>
+				</div>
+
+				<div class="orbita mars">
+				<img
+					src="mars.png"
+					class="mars-img"
+					alt=""
+				/>
+			</div>
+			<div class="orbita jupiter">
+				<img
+					src="jupiter.png"
+					class="jupiter-img"
+					alt=""
+				/>
+			</div>
+			<div class="orbita saturn">
+				<img
+					src="saturn.png"
+					class="saturn-img"
+					alt=""
+				/>
+			</div>
+			<div class="orbita uranus">
+				<img
+					src="uranus.png"
+					class="uranus-img"
+					alt=""
+				/>
+			</div>
+			<div class="orbita neptune">
+				<img
+					src="neptune.png"
+					class="neptune-img"
+					alt=""
+				/>
+			</div>
+		</div>
+	</body>
+</html>
